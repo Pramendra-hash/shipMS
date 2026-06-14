@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+  background: #0f172a;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #06b6d4;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0891b2;
+}
+
+/* Selection Color */
+::selection {
+  background: #06b6d4;
+  color: white;
+}
+
+/* Reusable Components */
+@layer components {
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-xl font-semibold text-white
+    bg-gradient-to-r from-cyan-500 to-blue-600
+    hover:scale-105 transition duration-300 shadow-lg;
+  }
+
+  .card {
+    @apply bg-slate-800 border border-slate-700
+    rounded-2xl p-6 shadow-lg;
+  }
+
+  .input-field {
+    @apply w-full p-3 rounded-xl bg-slate-800
+    border border-slate-700 text-white
+    focus:outline-none focus:ring-2 focus:ring-cyan-500;
+  }
+}
+
+/* Animated Background */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Fade Animation */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
