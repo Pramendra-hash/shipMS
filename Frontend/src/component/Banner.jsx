@@ -1,6 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import CaptainAI from "./CaptainAI";
 
 function Banner() {
+  const navigate = useNavigate();
+
   return (
     <section className="bg-slate-950 min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto px-6 py-20 w-full">
@@ -25,13 +29,21 @@ function Banner() {
             </p>
 
             <div className="flex gap-4 mt-8">
-              <button className="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-lg font-semibold text-white">
+
+              <button
+                onClick={() => navigate("/register")}
+                className="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-lg font-semibold text-white"
+              >
                 Get Started
               </button>
 
-              <button className="border border-slate-700 px-6 py-3 rounded-lg text-white">
+              <button
+                onClick={() => navigate("/ships")}
+                className="border border-slate-700 px-6 py-3 rounded-lg text-white"
+              >
                 View Demo
               </button>
+
             </div>
 
             <div className="grid grid-cols-3 gap-6 mt-12">
@@ -62,10 +74,10 @@ function Banner() {
           <div>
             <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800">
               <img
-  src="https://wpassets.porttechnology.org/wp-content/uploads/2020/05/25160315/hmm-algeciras.jpg"
-  alt="Container Ship"
-  className="w-full h-[400px] object-cover rounded-2xl"
-/>
+                src="https://wpassets.porttechnology.org/wp-content/uploads/2020/05/25160315/hmm-algeciras.jpg"
+                alt="Container Ship"
+                className="w-full h-[400px] object-cover rounded-2xl"
+              />
 
               <div className="grid grid-cols-2 gap-4 mt-6">
                 <div className="bg-slate-800 p-4 rounded-xl">
@@ -94,5 +106,4 @@ function Banner() {
     </section>
   );
 }
-
 export default Banner;

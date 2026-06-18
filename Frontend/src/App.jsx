@@ -1,30 +1,24 @@
-import Navbar from "./component/Navbar";
-import Banner from "./component/Banner";
-import FleetStats from "./component/FleetStats";
-import Services from "./component/Services";
-import ShipTable from "./component/ShipTable";
-import CaptainSection from "./component/CaptainSection";
-import Testimonials from "./component/Testimonials";
-import FAQ from "./component/FAQ";
-import ContactSection from "./component/ContactSection";
-import Newsletter from "./component/Newsletter";
-import Footer from "./component/Footer";
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Fleet from "./pages/Fleet";
+import Captains from "./pages/Captains";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Banner />
-      <FleetStats />
-      <Services />
-      <ShipTable />
-      <CaptainSection />
-      <Testimonials />
-      <FAQ />
-      <ContactSection />
-      <Newsletter />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+
+      <Route path="/login" element={<Login />} />
+
+      <Route path="/register" element={<Register />} />
+
+      <Route path="/ships" element={<Fleet />} />
+
+      <Route path="/captains" element={<Captains />} />
+    </Routes>
   );
 }
 

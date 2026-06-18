@@ -1,3 +1,4 @@
+import CaptainAI from "./CaptainAI";
 import React from "react";
 
 function Footer() {
@@ -86,6 +87,7 @@ function Footer() {
         </div>
 
       </div>
+      <CaptainAI />
     </footer>
   );
 }
