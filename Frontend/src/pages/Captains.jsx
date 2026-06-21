@@ -16,7 +16,7 @@ const Captains = () => {
 const fetchCaptains = async () => {
   try {
     const response = await fetch(
-      "http://localhost:4000/api/captains"
+      "https://shipms.onrender.com/api/captains"
     );
 
     const data = await response.json();
@@ -31,7 +31,7 @@ const fetchCaptains = async () => {
 const fetchShips = async () => {
   try {
     const response = await fetch(
-      "http://localhost:4000/api/ships"
+      "https://shipms.onrender.com/api/ships"
     );
 
     const data = await response.json();
@@ -53,7 +53,7 @@ const fetchShips = async () => {
 
     try {
       await fetch(
-        "http://localhost:4000/api/captains",
+        "https://shipms.onrender.com/api/captains",
         {
           method: "POST",
           headers: {
@@ -85,7 +85,7 @@ const fetchShips = async () => {
   const deleteCaptain = async (id) => {
     try {
       await fetch(
-        `http://localhost:4000/api/captains/${id}`,
+        `https://shipms.onrender.com/api/captains/${id}`,
         {
           method: "DELETE",
         }
@@ -104,7 +104,7 @@ const fetchShips = async () => {
 
   try {
     await fetch(
-      `http://localhost:4000/api/captains/${editingCaptain._id}`,
+      `https://shipms.onrender.com/api/captains/${editingCaptain._id}`,
       {
         method: "PUT",
         headers: {

@@ -12,7 +12,7 @@ const Login = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:4000/api/auth/login",
+        "https://shipms.onrender.com/api/auth/login",
         {
           method: "POST",
           headers: {

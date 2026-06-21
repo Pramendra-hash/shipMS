@@ -18,7 +18,7 @@ const Ships = () => {
   const fetchShips = async () => {
     try {
       const response = await fetch(
-        "http://localhost:4000/api/ships"
+        "https://shipms.onrender.com/api/ships"
       );
 
       console.log("Response Status:", response.status);
@@ -41,7 +41,7 @@ const Ships = () => {
   const deleteShip = async (id) => {
     try {
       await fetch(
-        `http://localhost:4000/api/ships/${id}`,
+        `https://shipms.onrender.com/api/ships/${id}`,
         {
           method: "DELETE",
         }
@@ -71,7 +71,7 @@ const Ships = () => {
 
     try {
       await fetch(
-        `http://localhost:4000/api/ships/${editingShip._id}`,
+        `https://shipms.onrender.com/api/ships/${editingShip._id}`,
         {
           method: "PUT",
           headers: {

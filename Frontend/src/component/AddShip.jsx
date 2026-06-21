@@ -10,7 +10,7 @@ const AddShip = () => {
     e.preventDefault();
 
     const response = await fetch(
-      "http://localhost:4000/api/ships",
+      "https://shipms.onrender.com/api/ships",
       {
         method: "POST",
         headers: {

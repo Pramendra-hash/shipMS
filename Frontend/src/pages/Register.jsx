@@ -12,7 +12,7 @@ const Register = () => {
 
   try {
       const response = await fetch(
-        "http://localhost:4000/api/auth/register",
+        "https://shipms.onrender.com/api/auth/register",
         {
           method: "POST",
           headers: {
